@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Donuts</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 90px;
+  color: #ffcc5e;
+  text-shadow: 7px 9px 0 rgba(0,0,0,0.3);
+}
+
+.hero p {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #f95f5d;
+  color: #ffcc5e;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+.btn.white {
+  background: #c4486b;
+  color: white;
+}
+
+/* CAROUSEL */
+.carousel {
+  padding: 40px 0;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.carousel img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 80px 10%;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #c4486b;
+  font-size: 32px;
+}
+
+.about-text h4 {
+  color: #60bf56;
+  text-transform: uppercase;
+  margin: 10px 0 20px;
+}
+
+.divider {
+  width: 40px;
+  height: 3px;
+  background: #eab010;
+  margin-bottom: 20px;
+}
+
+.about-text ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.about-text li {
+  margin-bottom: 10px;
+}
+
+.about-text li::before {
+  content: "✔ ";
+  color: #f95f5c;
+}
+
+.about-text li.not::before {
+  content: "✖ ";
+}
+
+.founder {
+  font-family: 'Poppins', sans-serif;
+  color: #c4486b;
+  margin-top: 30px;
+}
+
+.role {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border: 10px solid white;
+  box-shadow: 20px 20px 0 #f4f4f4;
+}
+
+/* CTA */
+.cta {
+  background: #5ebcff;
+  padding: 80px 10%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* FEATURED */
+.featured {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.featured h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #f95f5c;
+}
+
+.subtitle {
+  color: #60bf56;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.menu-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-item {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.menu-item h3,
+.menu-item p {
+  position: relative;
+  z-index: 2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .cta {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>HAPPY DONUTS</h1>
+    <p>The freshest ingredients for you!</p>
+    <a href="#" class="btn">View Menu</a>
+  </div>
+</section>
+
+<section class="carousel">
+  <div class="carousel-container">
+    <img src="donut1.jpg" alt="">
+    <img src="donut2.jpg" alt="">
+    <img src="donut3.jpg" alt="">
+    <img src="donut4.jpg" alt="">
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-text">
+    <h2>We only serve the best.</h2>
+    <h4>We are the best DONUTS maker in town</h4>
+    <div class="divider"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <ul>
+      <li>Praesent ex erat, faucibus non lectus eu</li>
+      <li>Tincidunt rutrum metus</li>
+      <li>Mauris quis ex quam</li>
+      <li class="not">In hac habitasse platea dictumst</li>
+    </ul>
+
+    <h3 class="founder">Anna Margarate</h3>
+    <p class="role">The Founder of Happy Donuts</p>
+  </div>
+
+  <div class="about-image">
+    <img src="founder.jpg" alt="">
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <h2>View our best menus.</h2>
+    <p>Try our menus with your family & friends.</p>
+  </div>
+  <a href="#" class="btn white">View Menu</a>
+</section>
+
+<section class="featured">
+  <h2>Our Featured Menus.</h2>
+  <p class="subtitle">The favorite DONUTS this week</p>
+
+  <div class="menu-grid">
+    <div class="menu-item" style="background-image:url('menu1.jpg')">
+      <h3>Donuts Lumer</h3>
+      <p>Fresh & Tangy</p>
+    </div>
+
+    <div class="menu-item" style="background-image:url('menu2.jpg')">
+      <h3>Choco Blast</h3>
+      <p>Chocolate Heaven</p>
+    </div>
+
+    <div class="menu-item" style="background-image:url('menu3.jpg')">
+      <h3>Pink Berry</h3>
+      <p>Sweet & Colorful</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
